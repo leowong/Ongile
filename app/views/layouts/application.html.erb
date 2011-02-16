@@ -1,14 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Ongile</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
+
+
+	<!-- General meta information -->
+		<title>网震™敏捷开发</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="robots" content="index, follow" /> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<!-- // General meta information -->
+	
+	
+	<!-- Load stylesheets -->
+		<link type="text/css" rel="stylesheet" href="/css/960.css" media="screen" /><!-- no need to edit, 960.gs Framework -->
+		<link type="text/css" rel="stylesheet" href="/css/screen.css" media="screen" />
+		<link id="theme-colors" type="text/css" rel="stylesheet" href="/css/themes/default.css" media="screen" /><!-- replace css/themes/xxxxxx.css with the theme you want to use -->
+		<link type="text/css" rel="stylesheet" href="/css/print.css" media="print" />
+		<link type="text/css" rel="stylesheet" href="/css/jquery.fancybox-1.3.4.css" media="screen" /><!-- no need to edit, lightbox css -->
+		<!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="http://curtziegler.com/sitedemo/clearly-modern/html/css/ie6.css" media="screen" /><![endif]-->
+	<!-- // Load stylesheets -->
+	
+	
+	<!-- Load Javascript / jQuery -->
+		<!--[if lt IE 7]><script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script><![endif]-->    
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/superfish-combined.js"></script>
+		<script type="text/javascript" src="/js/jquery.cycle.all.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.fancybox-1.3.4.pack.js"></script>
+        <script type="text/javascript" src="/js/jquery.tweet.js"></script>
+		<script type="text/javascript" src="/js/general.js"></script>
+	<!-- // Load Javascript / jQuery -->
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/gif" href="/images/favicon.gif" />
+	<!-- // Favicon -->
+	
+	<%= csrf_meta_tag %>
+	
+<meta charset="UTF-8"></head>
 <body>
+	
+    
+	<div id="outer" class="clearfix">
+	
+        
+        <div id="topbar" class="clearfix">
+            
+            <div class="container_12">
+                
+                <div class="grid_6">
+                    <p><a href="./index.html"><strong>网震敏捷开发</strong> › 企业应用系统开发顾问</a></p>
+                </div><!-- //grid_6 -->
 
-<%= yield %>
+                <div class="grid_6" id="info">
+                    <p>电话： <strong>010－64438335</strong> E-mail： <strong><a href="mailto:info@ongile.com">info@ongile.com</a></strong></p>
+                </div><!-- //grid_6 -->
 
+                
+            </div><!-- //container_12 -->
+            
+        </div><!-- //topbar -->
+            
+            
+		<div id="header" class="clearfix">          
+        	
+        	<div class="container_12">
+            	
+           		<div class="grid_12" id="header-container">
+                    
+                    <div id="logo">
+                        <h1><a href="./index.html" title="Go to the home page"><img src="/images/logo-trans.png" alt="Logo" /></a></h1>
+                    </div><!-- //logo -->
+                    
+                    <ul class="sf-menu">
+						<li><a href="./index.html">首页</a></li>
+                        <li><a href="./features.html">服务</a>
+                        	<ul>
+                            	<li><a href="#">软件订制开发</a></li>
+                                <li><a href="#">界面设计</a></li>
+                                <li><a href="#">系统维护与支持服务</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">技术实力</a></li>
+                        <li><a href="#">关于网震</a></li>
+					</ul>
+            	</div><!-- //grid_12 -->
+            
+			</div><!-- //container_12 -->
+            
+        
+        </div><!-- //header -->
+        
+        
+       <div id="main" class="clearfix">
+        
+        <%= yield %>
+        
+       </div><!-- //main -->
+        
+        <div id="footer" class="clearfix">
+        	<div class="container_12">
+            	
+                <div class="grid_3">
+                	
+                    <div class="widget widget_links">
+                    	<h3 class="widgettitle">本站基于以下技术与平台构建</h3>
+                        <ul>
+                            <li><a href="#">Ruby on Rails</a></li>
+                            <li><a href="#">亚马逊 EC2 云服务</a></li>
+                        </ul>
+                    </div>
+                    
+                </div><!--//grid_3-->
+                
+                <div class="grid_3">
+                
+                	<div class="widget widget_links">
+                    	<h3 class="widgettitle">招聘信息</h3>
+                        <ul>
+                            <li><a href="#">User Experience Designer</a></li>
+                            <li><a href="#">User Experience Designer</a></li>
+                            <li><a href="#">User Experience Designer</a></li>
+                        </ul>
+                    </div>
+                    
+                </div><!--//grid_3-->
+                
+                <div class="grid_6">
+                	
+                    <div class="widget">
+                    	<h3 class="widgettitle">联系我们</h3>
+                    </div>
+                </div><!--//grid_6-->
+                
+            </div><!--//container_12-->
+        </div><!-- //footer -->
+       	
+        <div id="footer-bottom" class="clearfix">
+            <div class="container_12">
+            	<div class="grid_12">
+                    <p class="left">&copy; 2010 - 2011 网震™敏捷开发</p>
+                    <p class="right"><a href="#" class="scroll-top" title="回顶端">回顶端</a></p>
+                </div>
+            </div><!--//container_12-->
+        </div>
+        
+        
+	</div><!-- //outer -->
+	
+	<script type="text/javascript" src="/js/analytics.js"></script>
 </body>
 </html>
