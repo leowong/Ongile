@@ -2,7 +2,7 @@ class FeedbacksController < ApplicationController
   layout "feedbacks"
 
   def index
-    @feedbacks = Feedback.all
+    @feedbacks = Feedback.order('created_at DESC')
   end
 
   def show
@@ -21,7 +21,7 @@ class FeedbacksController < ApplicationController
     @feedback = Feedback.new(params[:feedback])
 
     if @feedback.save
-      redirect_to @feedback, :notice => 'Feedback was successfully created.'
+      redirect_to root_url
     else
       render :action => "new"
     end

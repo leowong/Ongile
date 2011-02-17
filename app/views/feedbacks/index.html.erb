@@ -5,6 +5,7 @@
     <th>Name</th>
     <th>Contact</th>
     <th>Content</th>
+    <th>Created</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= feedback.name %></td>
     <td><%= feedback.contact %></td>
     <td><%= feedback.content %></td>
+    <td><%= feedback.created_at.to_s(:db) %></td>
     <td><%= link_to 'Show', feedback %></td>
     <td><%= link_to 'Edit', edit_feedback_path(feedback) %></td>
     <td><%= link_to 'Destroy', feedback, :confirm => 'Are you sure?', :method => :delete %></td>

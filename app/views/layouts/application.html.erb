@@ -135,27 +135,24 @@
                     <div class="widget">
                     	<h3 class="widgettitle">联系我们</h3>
                     	<div id="feedback_form">
-
-      <form action="/feedbacks" class="new_feedback" id="new_feedback" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="R5QbhlUfaGiKtw4iqg6ns6KWGj9wqDnivn54aWYmTqc="></div>
-      
-
-      <p>
-	<label for="feedback_name">称呼</label><br>
-	<input id="feedback_name" name="feedback[name]" size="30" type="text">
-      </p>
-      <p>
-	<label for="feedback_email">联系方式</label><small>（email、QQ、邮箱、电话……）</small><br>
-	<input id="feedback_email" name="feedback[email]" size="30" type="text">
-      </p>
-      <p>
-	<label for="feedback_body">正文</label>*<br>
-	<textarea cols="40" id="feedback_body" name="feedback[body]" rows="20"></textarea>
-      </p>
-      <p>
-	<input id="feedback_submit" name="commit" type="submit" value="提交">
-      </p>
-      </form>
-    </div><!--//feedback_form-->
+                          <%= form_for(@feedback) do |f| %>
+                            <div class="field">
+                              <%= f.label :name, "称呼" %><br />
+                              <%= f.text_field :name, :size => "30" %>
+                            </div>
+                            <div class="field">
+                              <%= f.label :contact, "联系方式" %><small>（email、QQ、邮箱、电话……）</small><br />
+                              <%= f.text_field :contact, :size => "30" %>
+                            </div>
+                            <div class="field">
+                              <%= f.label :content, "正文" %><br />
+                              <%= f.text_area :content, :size => "40x20" %>
+                            </div>
+                            <div class="actions">
+                              <%= f.submit "提交" %>
+                            </div>
+                          <% end %>
+			</div><!--//feedback_form-->
                     </div>
                 </div><!--//grid_6-->
                 
