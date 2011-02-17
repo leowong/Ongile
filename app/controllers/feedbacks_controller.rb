@@ -1,6 +1,8 @@
 class FeedbacksController < ApplicationController
   layout "feedbacks"
 
+  before_filter :authenticate, :except => [:new, :create]
+
   def index
     @feedbacks = Feedback.order('created_at DESC')
   end
