@@ -1,6 +1,8 @@
 Ongile::Application.routes.draw do
 
 
+  resources :feedbacks
+
   get "pages/home"
   
   root :to => "pages#home"
