@@ -1,4 +1,8 @@
-.bundle
 db/*.sqlite3
 log/*.log
 tmp/**/*
+.bundle
+.rvmrc
+.DS_Store
+*.swp
+*~
