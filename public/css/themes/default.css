@@ -208,3 +208,7 @@ form.standard .button:hover {
 .sf-sub-indicator {
 	background:url('../../images/menu/default-submenu-sprite.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
 }
+#manifesto {
+	text-indent: 2em;
+	line-height: 10px;
+}
